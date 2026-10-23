@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fffdfb;
+  --color-shell: #fbf4ef; /* 아주 연한 베이지 */
+  --color-sand: #efe2d6; /* 베이지 */
+  --color-blush: #f6dcd6; /* 연한 핑크 */
+  --color-coral: #e58b78; /* 포인트 코랄 */
+  --color-coral-deep: #c96a57;
+  --color-rose: #d9a3a0;
+  --color-ink: #3a2f2c; /* 본문 */
+  --color-mute: #8a7b75;
+  --color-line: #eadfd8;
+  --color-ok: #6f9b86;
+  --color-warn: #d39b4a;
+  --color-bad: #c4605a;
+
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-display: "Gowun Batang", "Nanum Myeongjo", serif;
+
+  --radius-card: 1.25rem;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* iOS 입력 확대 방지 */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-coral-deep);
+  font-weight: 600;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 드래그 핸들 – 터치 스크롤과 충돌 방지 */
+.drag-handle {
+  touch-action: none;
+  cursor: ns-resize;
+}
